@@ -377,6 +377,17 @@
         padding: 0;
         margin: 0 -14px 0 -14px;
     }
+
+    .kiio-entry-img div {
+        font-size: 12pt;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .kiio-entry-img:hover div {
+        visibility: visible;
+        opacity: 1;
+    }
     
     .kiio-entry-img-wrap p, .kiio-additional-img-wrap p {
         flex-basis: 100%;
