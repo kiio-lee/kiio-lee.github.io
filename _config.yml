@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 source: _jekyll
 destination: blog
-baseurl: "/musings-writings"
+baseurl: musings-writings
 
 title: Your awesome title
 email: your-email@example.com
