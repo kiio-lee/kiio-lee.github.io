@@ -1,47 +1,58 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+url: https://kiio.github.io/musings-writings
+title: Jihong Lee
+subtitle: Hi!
+# google_custom_search: 010245880960712892902:tnjd4ryb3ci
+# google_analytics_tracking_id: UA-12450662-3
+permalink: /blog/:year/:month/:day/:title/
+baseurl: "" # the subpath of your site, e.g. /blog/
+instagram_username: jihongeee
+github_username: jihong-lee
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-source: _jekyll
-destination: blog
-baseurl: /musings-writings
+exclude: ["vendor", "LICENSE", "_posts/LICENSE"]
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+plugins: ["jekyll-lunr-js-search", "jekyll-redirect-from", "jekyll-paginate"]
+lunr_search:
+  js_dir: "javascripts"
 
-# Build settings
 markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+paginate: 10
+paginate_path: "/blog/:num/"
+
+recent_posts: 5
+excerpt_link: "Read On —"
+titlecase: true
+category_dir: blog/categories
+
+authors:
+  jihong:
+    name: Jihong Lee
+    github: jihong-lee
+    instagram: jihongeee
+
+series:
+  - title: "React Native at Artsy"
+    url: series/react-native-at-artsy/
+  - title: "JavaScriptures"
+    url: series/javascriptures/
+  - title: "Stages of Professional Growth"
+    url: series/stages-of-professional-growth/
+  - title: "Artsy Tech Stack"
+    url: series/artsy-tech-stack/
+  - title: "Open Source by Default"
+    url: series/open-source-by-default/
+
+project:
+  - title: Eigen
+    svg: "_includes/svg/eigen.svg"
+    description:
+      "The Artsy iOS app: the Art World in Your Pocket. Hundreds of thousands of downloads. A reference for
+      building large-scale Cocoa applications. Built as a hybrid native-web mix, now with React Native."
+    category: featured
+    link: artsy/eigen
+    repository: https://github.com/artsy/eigen
+    created: Nov 18th, 2012

@@ -1,24 +1,43 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <meta name="author" content="{{ site.author }}">
+
+  {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+  <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  {%- feed_meta -%}
-  {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
-  {%- endif -%}
 
-  <!-- highlight.js support -->
-  <link rel="stylesheet" href="/js/highlightjs/styles/github.css">
-  <link rel="stylesheet" href="/js/highlightjs/styles/ssms.css" />
+  <meta property="og:image:type" content="image/png" />
 
-  <script type="text/javascript" src="/js/highlightjs/highlight.min.js"></script>
+  {% capture canonical %}{% if page.canonical %}{{ page.canonical }}{% else %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endif %}{% endcapture %}
+  <link rel="canonical" href="{{ canonical }}">
+  <link rel="alternate" type="application/rss+xml" title="Jihong's Blah Bidy Blah" href="/feed">
 
-  <script type="text/javascript" src="/js/highlightjs/languages/plaintext.min.js"></script>
-  <script type="text/javascript" src="/js/highlightjs/languages/powershell.min.js"></script>
-  <script type="text/javascript" src="/js/highlightjs/languages/tsql.min.js"></script>
+  <link href="{{ root_url }}/favicon.ico" rel="icon">
+  <link href="{{ root_url }}/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 
-  <script type="text/javascript"> hljs.highlightAll(); </script>
-  <!-- end highlight.js support -->
+  <script src="{{ root_url }}/javascripts/jquery-1.11.3.min.js"> </script>
+  <script src="{{ root_url }}/javascripts/gradient-fade.js"></script>
+  <script src="{{ root_url }}/javascripts/noframework.waypoints.min.js"></script>
+  <script src="{{ root_url }}/javascripts/sticky.min.js"></script>
+  <script src="{{ root_url }}/javascripts/search.min.js"></script>
+  <script src="{{ root_url }}/javascripts/custom-element.min.js"></script>
+  <script src="{{ root_url }}/javascripts/g-emoji-element.js"></script>
+
+  {% if page.project == true %}
+  <script src="{{ root_url }}/javascripts/modernizr-2.0.js"></script>
+  <script src="{{ root_url }}/javascripts/jquery.scrollTo.min.js"></script>
+  {% endif %}
+
+  <script type="text/javascript" src="https://fast.fonts.net/jsapi/f7f47a40-b25b-44ee-9f9c-cfdfc8bb2741.js"></script>
+
 </head>

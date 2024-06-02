@@ -1,0 +1,112 @@
+{% include head.html %}
+
+<link href="{{ root_url }}/css/post.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+{% if page.css %}
+<link href="{{ root_url }}/css/posts/{{page.css}}.css" media="screen, projection" rel="stylesheet" type="text/css">
+{% endif %}
+
+<body>
+  <div>
+    <div id="bodywrapper">
+      <header>
+        <ul>
+          <li><a href="/">Jihong's Blah Bidy Blah</a></li>
+          <li><a href="/musings">Musings</a></li>
+          <li><a href="/notes">Notes</a></li>
+          <li><a href="/likes">Likes</a></li>
+        </ul>
+
+        <ul>
+          <li><a href="/projects">Projects</a></li>
+        </ul>
+      </header>
+
+      <section>
+        <header id="page">
+          <h1>{{ page.title }}</h1>
+          <h3>
+          <!-- Yep, single line so the comma lines up right -->
+          By {% for key in page.author %}{% assign author = site.authors[key] %}{% if forloop.index > 1 %},{% endif %} {{ author.name }}{% endfor %}
+          </h3>
+          <time datetime="{{page.date | date: "%Y-%m-%d"}}">{{ page.date | date: "%b %-d, %Y" }}</time>
+        </header>
+
+        <article class='post'>
+          {{ content }}
+        </article>
+
+        <article class='post'>
+          <p style="padding-bottom: 0; margin-bottom:0;">
+          <p/>
+        </article>
+
+      </section>
+
+      <footer>
+        <article>
+
+          <section>
+            <h4>Author</h4>
+            <p>{% for key in page.author %}{% assign author = site.authors[key] %}{% if forloop.index > 1 %},{% endif %} <a href="/author/{{key}}">{{ author.name }}</a>{% endfor %}</p>
+            <p>{% for key in page.author %}{% assign author = site.authors[key] %}{{ author.byline }}</a>{% endfor %}</p>
+          </section>
+
+          <section>
+            <h4>Post Meta</h4>
+            <p>{{ page.date | date: "%b %-d, %Y"  }}</p>
+            <p>Tagged: {{ page.categories | category_links }}</p>
+          </section>
+          <br/>
+          <section>
+            <h4>Social</h4>
+            <ul>
+              <li><a href="https://github.com/jihong-lee/">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/jihong-lee/">LinkedIn</a></li>
+              <li><a href="https://instagram.com/jihongeee">Instagram</a></li>
+              <li><a href="https://www.youtube.com/channel/UCM4C3VgKfbhx0u2obnIwR8Q">YouTube</a></li>
+            </ul>
+          </section>
+
+          <section>
+            <h4>Blog</h4>
+            <ul>
+              <li><a href='http://jihong-lee.github.io/blog/archives/'>Archives</a></li>
+              <li><a href='http://jihong-lee.github.io/search/'>Search</a></li>
+              <li><a href='https://github.com/jihong-lee/jihong-lee.github.io'>Code on GitHub</a></li>
+              <li><a href='https://github.com/jihong-lee/jihong-lee.github.io/edit/source/{{page.path}}'>Typos?</a></li>
+            </ul>
+          </section>
+
+        </article>
+
+        <article>
+          <section>
+            <h4>Post Series on This Blog</h4>
+            <ul>
+              {% for series in site.series %}
+              <li><a href='/{{ series.url }}'>{{series.title}}</a></li>
+              {% endfor %}
+            </ul>
+          </section>
+
+          <section>
+          {% if page.series %}
+          <p class="meta-series" style="padding-bottom:0;">More from <strong>{{ page.series | series_link }}</strong></p>
+          <ul>
+            {% for post in site.posts %}
+              {% if post.series == page.series %}
+                {% if post.id != page.id %}
+                <li><a href='{{ root_url }}{{ post.url }}'>{{post.title}}</a></li>
+                {% endif %}  
+              {% endif %}
+            {% endfor %}
+          </ul>
+          {% endif %}
+          </section>
+        </article>
+
+      </footer>
+    </div>
+  </div>
+</body>
