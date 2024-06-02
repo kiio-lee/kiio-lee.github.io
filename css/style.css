@@ -1,17 +1,17 @@
 @font-face {
-    font-family:'FaktProLight';
-    src: url("webfonts/FaktProLight.otf") format("opentype");
+    font-family:'KIIOLight';
+    src: url("webfonts/KIIOLight.otf") format("opentype");
     font-style: light;
 }
 
 @font-face {
-    font-family:'FaktProNormal';
-    src: url("webfonts/FaktProNormal.otf") format("opentype");
+    font-family:'KIIONormal';
+    src: url("webfonts/KIIONormal.otf") format("opentype");
 }
 
 @font-face {
-    font-family:'FaktProMedium';
-    src: url("webfonts/FaktProMedium.otf") format("opentype");
+    font-family:'KIIOMedium';
+    src: url("webfonts/KIIOMedium.otf") format("opentype");
     font-style: medium;
 }
     
@@ -26,7 +26,7 @@
     body {
     margin: 0;
     padding: 0;
-    font-family: 'FaktProLight',sans-serif;
+    font-family: 'KIIOLight',sans-serif;
     font-size: 15px;
     line-height: 20px;
     font-feature-settings: "calt";
@@ -145,7 +145,7 @@
     }
     
     h1,h2,h3 {
-    font-family: 'FaktProMedium';
+    font-family: 'KIIOMedium';
     }
     
     h1,h5,h6,p,ul {
@@ -174,7 +174,7 @@
     }
     
     h5,h6 {
-    font-family: 'FaktProLight';
+    font-family: 'KIIOLight';
     break-before: avoid;
     }
     
