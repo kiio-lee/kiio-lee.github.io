@@ -314,7 +314,7 @@
     .kiio-menu-cols {
         flex-grow: 1;
         flex-basis: 408px;
-        padding: 0 14px 0;
+        padding: 0 14px 10px;
         column-count: 4;
         column-gap: 28px;
     }
