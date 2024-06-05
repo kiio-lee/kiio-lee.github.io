@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <div id="kiio-menu" >
     <div class="kiio-menu-flex" >
         <div class="kiio-menu-cols">
@@ -77,3 +77,18 @@
         </div>
     </div> 
 </div> <!-- #kiio-menu -->
+
+<script type="text/javascript">
+    $( "#kiio-navicon" ).click(function() {
+        $( "#kiio-menu" ).toggle();
+    });
+    $( "#kiio-search-link" ).click(function() {
+        $( "#kiio-search-link" ).toggle();
+        $( "#kiio-search-field" ).toggle();
+        $( "#s" ).focus();
+    });
+    $( "#s" ).blur(function() {
+        $( "#kiio-search-link" ).toggle();
+        $( "#kiio-search-field" ).toggle();
+        });
+    </script>
