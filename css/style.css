@@ -271,7 +271,7 @@
     }
 
     #kiio-menu-icon {
-        font-size: 2px;
+        font-size: 22px;
     }
     
     #kiio-language {
@@ -326,7 +326,7 @@
     input {
     display: inline-block;
     width: 100%;
-    font-family: 'KIIOLight';
+    font-family: "KIIOLight", sans-serif;
     font-size: 15px;
     line-height: 20px;
     border-width: 0;
