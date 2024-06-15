@@ -594,6 +594,7 @@
         .kiio-entry-content {
             column-count: 2;
             column-gap: 28px;
+            padding: 0 0 20px 0;
         }	
         .kiio-entry-content .kiio-entry-img-wrap {
             text-align: right;
