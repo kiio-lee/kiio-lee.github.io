@@ -468,7 +468,9 @@
         display: grid;
         grid-gap: 28px;
         grid-template-columns: 2fr 5fr;
-        font-family: 'KIIOLight', sans-serif;
+    }
+
+    #kiio-txt-small {
         font-weight: lighter,
         font-size: 11px,
     }
