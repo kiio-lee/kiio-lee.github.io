@@ -461,6 +461,13 @@
         -moz-column-gap: 28px;
         column-gap: 28px;
     }
+
+    .kiio-left {
+        width: 30%
+    }	
+    .kiio-right {
+        width: 70%
+    }	
     
     #kiio-related-works {
     line-height: 20px;
