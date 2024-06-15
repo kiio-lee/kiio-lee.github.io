@@ -331,7 +331,6 @@
     .kiio-entry-heading {
     display: grid;
     grid-template-columns: auto 40px auto;
-    padding-bottom: 75px;
     margin: 0;
     column-span: all;
     }
@@ -359,7 +358,7 @@
     
     .kiio-entry-content,.kiio-page-content, .kiio-wide-content {
     display: block;
-    padding: 20px 0 0 0;
+    padding: 40px 0 0 0;
     margin: 0;
     }
     
