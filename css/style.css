@@ -391,7 +391,7 @@
         align-items: start;
         align-content: flex-start;
         padding: 0;
-        margin: 0 -14px 0 -14px;
+        margin: 0;
     }
 
     .kiio-entry-img div {
