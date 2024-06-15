@@ -435,7 +435,7 @@
         page-break-inside: avoid;
         break-inside: avoid;
         text-align: left;
-        margin: 0;
+        margin-top: 10px;
         padding: 0;
         column-count: 4;
         -webkit-column-width: 295px;
