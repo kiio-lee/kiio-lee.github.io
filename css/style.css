@@ -47,7 +47,7 @@
         font-kerning: normal;
         text-rendering: optimizeLegibility;
         color: black;
-        background-color: #ffffff;
+        background-color: #faf8f6;
         white-space: normal;
         -webkit-text-size-adjust: 100%;
         text-size-adjust: 100%
@@ -301,7 +301,7 @@
         align-content: flex-start;
         padding: 0;
         margin: 0 -28px;
-        background-color: #ffffff;
+        background-color: #faf8f6;
     }   
 
     .kiio-menu-col {
