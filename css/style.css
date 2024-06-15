@@ -462,12 +462,10 @@
         column-gap: 28px;
     }
 
-    .kiio-left {
-        width: 30%
-    }	
-    .kiio-right {
-        width: 70%
-    }	
+    .kiio-grid {
+        display: grid;
+        grid-template-columns: 30% 70%; /*columns widths*/
+    }
     
     #kiio-related-works {
     line-height: 20px;
