@@ -354,9 +354,7 @@
     .kiio-entry-content,.kiio-page-content, .kiio-wide-content {
         padding: 40px 0 0 0;
         margin: 0;
-        display: grid;
-        grid-gap: 15px;
-        grid-template-columns: 3fr 5fr;
+        display: block;
     }
     
     .kiio-wide-content {
@@ -447,7 +445,7 @@
     .kiio-grid {
         display: grid;
         grid-gap: 28px;
-        grid-template-columns: 3fr 5fr;
+        grid-template-columns: 5fr 8fr;
         margin: 4px 0 0 0;
         padding: 20px 0 20px 0;
     }
