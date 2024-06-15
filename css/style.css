@@ -231,8 +231,8 @@
     #kiio-header {
         display: grid;
         grid-template-columns: 30px auto 30px;
-        margin: 0 28px 20px;
-        padding: 20px 0 0;
+        /* margin: 0 28px 20px;
+        padding: 20px 0 0; */
     }
     
     #kiio-header a,.kiio-entry-heading a,.kiio-entry-img-wrap a {
