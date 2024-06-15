@@ -41,7 +41,8 @@
     body {
         margin: 0;
         padding: 0;
-        font-family: 'KIIOLight';
+        font-family: 'KIIOLight', sans-serif;
+        font-weight: lighter,
         font-size: 12px;
         line-height: 20px;
         font-feature-settings: "calt";
