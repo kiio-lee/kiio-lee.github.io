@@ -352,9 +352,11 @@
     }
     
     .kiio-entry-content,.kiio-page-content, .kiio-wide-content {
-    display: block;
-    padding: 40px 0 0 0;
-    margin: 0;
+        padding: 40px 0 0 0;
+        margin: 0;
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: 3fr 5fr;
     }
     
     .kiio-wide-content {
