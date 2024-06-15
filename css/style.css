@@ -342,7 +342,7 @@
     
     .kiio-entry-title p, .kiio-entry-title h1 {
         margin:0;
-        padding: 0 20px 0 0;
+        padding: 0 0 0 20px;
     }
     .kiio-previous-post {
     text-align: left;
