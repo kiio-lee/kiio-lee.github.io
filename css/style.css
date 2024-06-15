@@ -331,7 +331,7 @@
     .kiio-entry-heading {
     display: grid;
     grid-template-columns: auto 40px auto;
-    padding-bottom: 75px;    ;
+    padding-bottom: 75px;
     margin: 0;
     column-span: all;
     }
