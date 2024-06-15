@@ -1,8 +1,7 @@
 @font-face {
     font-family:'KIIOLight';
     src: url("webfonts/KIIOLight.otf") format("opentype");
-    font-style: light;
-    font-weight: 200;
+    font-weight: lighter;
 }
 
 @font-face {
