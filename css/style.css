@@ -433,13 +433,11 @@
         text-align: left;
         margin-top: 10px;
         padding: 0;
-        column-count: 4;
         -webkit-column-width: 295px;
         -moz-column-width: 295px;
         column-width: 295px;
         -webkit-column-gap: 28px;
         -moz-column-gap: 28px;
-        column-gap: 28px;
     }
 
     .kiio-grid {
